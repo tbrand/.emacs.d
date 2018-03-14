@@ -4,6 +4,7 @@ set -eux
 
 # fzf
 curl -fsSL https://raw.githubusercontent.com/junegunn/fzf/master/install | /bin/bash
+mv bin/fzf /usr/local/bin/. && rmdir bin
 
 # ripgrep
 yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo
@@ -11,4 +12,6 @@ yum install ripgrep
 
 # cask
 curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+export PATH="$HOME/.cask/bin:$PATH"
+echo PATH="$HOME/.cask/bin:$PATH" >> .bashrc
 cd ~/.emacs.d && cask install --verbose
