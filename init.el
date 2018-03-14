@@ -1,30 +1,15 @@
+;; Mac
+(require 'cask "/usr/local/opt/cask/cask.el")
+;; Linux
+;; (require 'cask "~/.cask/cask.el")
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; Mac
-(require 'cask "/usr/local/opt/cask/cask.el")
-;; Linux
-;; (require 'cask "~/.cask/cask.el")
-
 (cask-initialize)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (crystal-mode fzf dockerfile-mode editorconfig vue-mode groovy-mode rjsx-mode go go-mode swift-mode package-build shut-up epl git commander f dash s))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(linum-highlight-face ((t (:foreground "#ffffff" :background "#2c3e50")))))
-
 ;; ---------------
 ;; Global settings
 ;; ---------------
@@ -160,11 +145,6 @@
 (add-to-list 'auto-mode-alist '("Dangerfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Dangerfile.hosted$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("[Rr]akefile$" . ruby-mode))
-
-;; def <-> end ハイライト
-(require 'ruby-block)
-(ruby-block-mode t)
-(setq ruby-block-highlight-toggle t)
 
 ;; gem install pry pry-doc method_source
 ;; Ruby用補完

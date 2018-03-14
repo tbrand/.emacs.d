@@ -63,3 +63,4 @@
 (depends-on "scss-mode")
 (depends-on "crystal-mode")
 (depends-on "fzf")
+(depends-on "dockerfile-mode")
