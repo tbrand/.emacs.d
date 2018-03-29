@@ -2,10 +2,6 @@
 
 set -eux
 
-# fzf
-curl -fsSL https://raw.githubusercontent.com/junegunn/fzf/master/install | /bin/bash
-sudo mv bin/fzf /usr/local/bin/. && rmdir bin
-
 # ripgrep
 sudo yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo
 sudo yum install ripgrep

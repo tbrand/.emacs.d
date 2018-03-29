@@ -62,5 +62,7 @@
 (depends-on "stylus-mode")
 (depends-on "scss-mode")
 (depends-on "crystal-mode")
-(depends-on "fzf")
 (depends-on "dockerfile-mode")
+(depends-on "ivy")
+(depends-on "counsel")
+(depends-on "swiper")
