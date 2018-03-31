@@ -111,9 +111,9 @@
 (setq ivy-re-builders-alist
       '((t . ivy--regex-plus)))
 (global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+;; (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 ;; (defvar counsel-find-file-ignore-regexp (regexp-opt '("./" "../")))
-(global-set-key "\C-s" 'swiper)
+;; (global-set-key "\C-s" 'swiper)
 (defvar swiper-include-line-number-in-search t)
 
 ;; web-mode
