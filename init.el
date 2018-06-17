@@ -87,9 +87,17 @@
 ;; markdown-mode
 (require 'markdown-mode)
 
+;; dired
+(require 'dired)
+
 ;; wdired
 (require 'wdired)
 (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
+
+;; peep-dired
+(require 'peep-dired)
+(define-key dired-mode-map "\C-xx" 'peep-dired)
+(define-key peep-dired-mode-map "\C-xx" 'peep-dired)
 
 ;; smartparens
 ;; (require 'smartparens)
@@ -202,3 +210,4 @@
 
 ;; js
 (setq js-indent-level 2)
+(put 'dired-find-alternate-file 'disabled nil)
