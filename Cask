@@ -39,7 +39,6 @@
 (depends-on "neotree")
 (depends-on "markdown-mode")
 (depends-on "powerline")
-(depends-on "hlinum")
 (depends-on "wdired")
 (depends-on "smartparens")
 (depends-on "yaml-mode")

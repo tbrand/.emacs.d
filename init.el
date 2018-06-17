@@ -47,8 +47,8 @@
 (global-linum-mode)
 
 ;; hlinum
-(require 'hlinum)
-(hlinum-activate)
+;; (require 'hlinum)
+;; (hlinum-activate)
 
 ;; popwin
 (require 'popwin)
