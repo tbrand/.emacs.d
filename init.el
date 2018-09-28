@@ -2,14 +2,13 @@
 (require 'cask "/usr/local/opt/cask/cask.el")
 ;; Linux
 ;; (require 'cask "~/.cask/cask.el")
+(cask-initialize)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
-
-(cask-initialize)
 ;; ---------------
 ;; Global settings
 ;; ---------------
@@ -45,6 +44,9 @@
 ;; linum
 (require 'linum)
 (global-linum-mode)
+
+;; flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; hlinum
 ;; (require 'hlinum)
@@ -105,8 +107,8 @@
 ;; (add-hook 'crystal-mode-hook #'smartparens-mode)
 ;; (sp-local-pair 'crystal-mode "%" "%" :trigger "%")
 ;; (autoload 'crystal-mode "crystal-mode" "Major mode for crystal files" t)
-;;    (add-to-list 'auto-mode-alist '("\\.cr$" . crystal-mode))
-;;    (add-to-list 'interpreter-mode-alist '("crystal" . crystal-mode))
+;;     (add-to-list 'auto-mode-alist '("\\.cr$" . crystal-mode))
+;;     (add-to-list 'interpreter-mode-alist '("crystal" . crystal-mode))
 
 ;; ivy/swiper
 (require 'ivy)
@@ -200,6 +202,7 @@
                              (set (make-variable-buffer-local 'company-idle-delay) 0.1)
                              (set (make-variable-buffer-local 'company-minimum-prefix-length) 3)))
 
+
 ;; React
 ;; .jsは全てrjsx-modeで読み込む
 ;; (add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
@@ -211,3 +214,17 @@
 ;; js
 (setq js-indent-level 2)
 (put 'dired-find-alternate-file 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (flycheck-rust racer auto-package-update protobuf-mode dockerfile-mode toml-mode gradle-mode rust-mode ripgrep yaml-mode crystal-mode cryptol-mode web-mode popwin peep-dired multiple-cursors markdown-mode counsel company anzu))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
