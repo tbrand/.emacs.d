@@ -211,3 +211,17 @@
 ;; js
 (setq js-indent-level 2)
 (put 'dired-find-alternate-file 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (flymake-rust flycheck-rust company-racer protobuf-mode yasnippet yaml-mode win-switch web-mode vue-mode use-package undo-tree toml-mode stylus-mode smex smartparens scss-mode sass-mode robe ripgrep racer projectile prodigy powerline popwin peep-dired pallet nyan-mode nim-mode neotree multiple-cursors markdown-mode magit idle-highlight-mode htmlize hlinum highlight-symbol helm groovy-mode gradle-mode go-mode flycheck-cask expand-region exec-path-from-shell elixir-mode editorconfig drag-stuff dockerfile-mode crystal-mode counsel company coffee-mode auto-complete anzu))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
